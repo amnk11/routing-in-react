@@ -14,13 +14,9 @@ const JobDetails = () => {
               {jobDetail.type}
             </span>
 
-            <h1 className="mt-4 text-4xl font-bold">
-              {jobDetail.title}
-            </h1>
+            <h1 className="mt-4 text-4xl font-bold">{jobDetail.title}</h1>
 
-            <p className="mt-2 text-lg text-zinc-400">
-              {jobDetail.company}
-            </p>
+            <p className="mt-2 text-lg text-zinc-400">{jobDetail.company}</p>
           </div>
 
           <div className="rounded-2xl bg-zinc-950 px-6 py-4 text-center">
@@ -54,9 +50,7 @@ const JobDetails = () => {
             Job Description
           </h2>
 
-          <p className="leading-8 text-zinc-300">
-            {jobDetail.description}
-          </p>
+          <p className="leading-8 text-zinc-300">{jobDetail.description}</p>
         </div>
 
         {/* Button */}
@@ -76,6 +70,8 @@ export const jobDetailsLoader = async ({ params }) => {
   const { id } = params;
 
   const response = await fetch(`http://localhost:5000/jobs/${id}`);
+
+  if (!response.ok) throw Error("could not found the job details");
 
   return response.json();
 };
