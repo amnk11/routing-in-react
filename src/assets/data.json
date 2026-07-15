@@ -1,0 +1,94 @@
+{
+    "jobs":[
+        {
+          "id": "1",
+          "title": "Frontend Developer",
+          "company": "TechNova",
+          "location": "Remote",
+          "type": "Full Time",
+          "salary": "₹8 - ₹12 LPA",
+          "description": "Build modern and responsive web applications using React and Tailwind CSS."
+        },
+        {
+          "id": "2",
+          "title": "Backend Developer",
+          "company": "CodeSphere",
+          "location": "Bangalore",
+          "type": "Full Time",
+          "salary": "₹10 - ₹15 LPA",
+          "description": "Develop scalable REST APIs using Node.js, Express, and MongoDB."
+        },
+        {
+          "id": "3",
+          "title": "React Developer",
+          "company": "NextGen Labs",
+          "location": "Hyderabad",
+          "type": "Remote",
+          "salary": "₹9 - ₹13 LPA",
+          "description": "Create reusable React components and optimize application performance."
+        },
+        {
+          "id": "4",
+          "title": "UI/UX Designer",
+          "company": "PixelCraft",
+          "location": "Delhi",
+          "type": "Internship",
+          "salary": "₹20,000/month",
+          "description": "Design modern user interfaces and improve user experience."
+        },
+        {
+          "id": "5",
+          "title": "Full Stack Developer",
+          "company": "InnovateX",
+          "location": "Pune",
+          "type": "Full Time",
+          "salary": "₹12 - ₹18 LPA",
+          "description": "Work across frontend and backend using the MERN stack."
+        },
+        {
+          "id": "6",
+          "title": "Software Engineer",
+          "company": "Infosys",
+          "location": "Mysore",
+          "type": "Full Time",
+          "salary": "₹6 - ₹9 LPA",
+          "description": "Develop enterprise software solutions and collaborate with cross-functional teams."
+        },
+        {
+          "id": "7",
+          "title": "Java Developer",
+          "company": "Tata Consultancy Services",
+          "location": "Kolkata",
+          "type": "Full Time",
+          "salary": "₹7 - ₹10 LPA",
+          "description": "Build and maintain Java Spring Boot applications."
+        },
+        {
+          "id": "8",
+          "title": "DevOps Engineer",
+          "company": "CloudSync",
+          "location": "Chennai",
+          "type": "Remote",
+          "salary": "₹14 - ₹20 LPA",
+          "description": "Manage CI/CD pipelines, Docker containers, and cloud infrastructure."
+        },
+        {
+          "id": "9",
+          "title": "Mobile App Developer",
+          "company": "AppVerse",
+          "location": "Noida",
+          "type": "Hybrid",
+          "salary": "₹8 - ₹11 LPA",
+          "description": "Develop cross-platform mobile applications using React Native."
+        },
+        {
+          "id": "10",
+          "title": "Data Analyst",
+          "company": "InsightIQ",
+          "location": "Mumbai",
+          "type": "Full Time",
+          "salary": "₹7 - ₹11 LPA",
+          "description": "Analyze business data, create dashboards, and generate actionable insights."
+        }
+      ]
+}

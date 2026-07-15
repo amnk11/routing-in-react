@@ -5,6 +5,7 @@ const links = [
   { name: "Products", path: "/products" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
+  { name: "Jobs", path: "/jobs" },
 ];
 
 const Navbar = () => {
