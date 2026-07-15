@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const links = [
   { name: "Home", path: "/" },
@@ -8,10 +8,11 @@ const links = [
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <nav className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-8">
-        {/* Brand */}
         <NavLink
           to="/"
           className="cursor-pointer text-3xl font-black tracking-tight"
@@ -22,7 +23,6 @@ const Navbar = () => {
           <span className="text-amber-400">.</span>
         </NavLink>
 
-        {/* Links */}
         <ul className="flex items-center gap-12 text-[15px] font-medium">
           {links.map((item) => (
             <li key={item.name}>
@@ -42,8 +42,10 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Button */}
-        <button className="rounded-xl bg-linear-to-r from-amber-300 via-yellow-400 to-orange-500 px-6 py-3 font-semibold text-black shadow-lg shadow-amber-500/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-amber-500/40 active:scale-95">
+        <button
+          className="rounded-xl bg-linear-to-r from-amber-300 via-yellow-400 to-orange-500 px-6 py-3 font-semibold text-black shadow-lg shadow-amber-500/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-amber-500/40 active:scale-95"
+          onClick={() => navigate("/contact", { replace: true })}
+        >
           Get Started
         </button>
       </div>

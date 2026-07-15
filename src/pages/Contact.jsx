@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -8,64 +9,43 @@ const Contact = () => {
           Contact <span className="text-amber-400">Me</span>
         </h1>
 
-        <p className="mb-12 max-w-2xl text-lg text-zinc-400">
-          Have a project in mind or just want to say hello? Feel free to reach
-          out. I'll get back to you as soon as possible.
+        <p className="mb-10 max-w-2xl text-lg text-zinc-400">
+          Feel free to get in touch. Choose an option below to view my contact
+          details or send me a message.
         </p>
 
-        <div className="grid gap-10 md:grid-cols-2">
-          {/* Contact Info */}
-          <div className="space-y-6">
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-              <h3 className="mb-2 text-xl font-semibold text-amber-400">
-                📧 Email
-              </h3>
-              <p className="text-zinc-400">aman@example.com</p>
-            </div>
+        <div className="mb-10 flex gap-4">
+          <NavLink
+            to="info"
+            end
+            className={({ isActive }) =>
+              `rounded-lg px-5 py-2 font-medium transition ${
+                isActive
+                  ? "bg-amber-400 text-black"
+                  : "border border-zinc-700 bg-zinc-900 text-zinc-300 hover:border-amber-400 hover:text-amber-400"
+              }`
+            }
+          >
+            Contact Info
+          </NavLink>
 
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-              <h3 className="mb-2 text-xl font-semibold text-amber-400">
-                📱 Phone
-              </h3>
-              <p className="text-zinc-400">+91 98765 43210</p>
-            </div>
-
-            <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-              <h3 className="mb-2 text-xl font-semibold text-amber-400">
-                📍 Location
-              </h3>
-              <p className="text-zinc-400">Purnia, Bihar, India</p>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <form className="space-y-5 rounded-2xl border border-zinc-800 bg-zinc-900 p-8">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-4 py-3 outline-none transition focus:border-amber-400"
-            />
-
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-950 px-4 py-3 outline-none transition focus:border-amber-400"
-            />
-
-            <textarea
-              rows="5"
-              placeholder="Your Message"
-              className="w-full resize-none rounded-lg border border-zinc-700 bg-zinc-950 px-4 py-3 outline-none transition focus:border-amber-400"
-            ></textarea>
-
-            <button
-              type="submit"
-              className="w-full rounded-lg bg-amber-400 py-3 font-semibold text-black transition duration-300 hover:bg-amber-300 active:scale-95"
-            >
-              Send Message
-            </button>
-          </form>
+          <NavLink
+            to="form"
+            className={({ isActive }) =>
+              `rounded-lg px-5 py-2 font-medium transition ${
+                isActive
+                  ? "bg-amber-400 text-black"
+                  : "border border-zinc-700 bg-zinc-900 text-zinc-300 hover:border-amber-400 hover:text-amber-400"
+              }`
+            }
+          >
+            Contact Form
+          </NavLink>
         </div>
+
+       
+
+        <Outlet />
       </div>
     </section>
   );
